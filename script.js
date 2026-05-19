@@ -17,11 +17,6 @@ function getData() {
 
       let journal = data.journal;
 
-      /// Brouillon pour plus tard : 
-      // <p>${journal.texteAppelAction}</p>
-      //   <br></br>
-
-
       headerDiv.innerHTML = `
         <img src="${journal.logo}" alt="">
         <h1>${journal.nomJournal}</h1>
@@ -109,30 +104,21 @@ function getData() {
     
       // TODO 5: REMPLIR LES THEMES
 
-        // `<section class="themes-section">
-        //   <div class="container">
-        //     <h2 class="section-title">Nos Thèmes</h2>
-        //     <div id="themes-list" class="themes-list">
-        //     </div>
-        //   </div>
-        // </section>`
-
-        let containerThemes = document.querySelector("#themes-list");
+        let containerThemes = document.getElementById("themes-list");
  
         function creerCarteTheme(theme) {
           let themes = data.journal.themes[0];
         
-          let cardThemes = `<div class="theme-card">
-            <div class="themes-section">
-              <h3 class="theme-badge">${theme.nom}</h3>
-              <p class="themes-list">${theme.description}</p>
-            </div> `;
-
+          let cardThemes = `<div class="theme-item">
+            <h3>${theme.nom}</h3>
+            <p>${theme.description}</p>
+          </div> `;
+        
           containerThemes.insertAdjacentHTML("beforeend", cardThemes);
         };
 
         data.journal.themes.forEach(theme => {
-              creerCarteTheme(theme)
+            creerCarteTheme(theme)
           });
 
       // TODO 6: REMPLIR LES AUTEURS
@@ -145,14 +131,38 @@ function getData() {
         //   </div>
         // </section>`
 
+         let containerAuteurs = document.getElementById("authors-list");
+ 
+        function creerCarteAuteurs(auteur) {
+          let auteurs = data.journal.auteurs[0];
+        
+          let cardAuteurs = `<div class="author-card">
+            <img class="author-image" src="${auteur.photo}" alt="">
+            <h3 >${auteur.prenom}</h3>
+            <p class="author-role">${auteur.typeExperience}</p>
+            <p class="author-bio">${auteur.presentation}</p>
+          </div> `;
+        
+          containerAuteurs.insertAdjacentHTML("beforeend", cardAuteurs);
+        };
+
+        data.journal.auteurs.forEach(auteur => {
+            creerCarteAuteurs(auteur)
+          });
+
+
       // TODO 7: REMPLIR LE CALL TO ACTION
 
-        // `<section class="cta-section">
-        //   <div class="container">
-        //     <div id="call-to-action">
-        //     </div>
-        //   </div>
-        // </section>`
+        let ctaDiv = document.getElementById("call-to-action");
+        console.log(ctaDiv);
+
+        ctaDiv.innerHTML = `
+        <p>${journal.texteAppelAction}</p>
+        <button class="cta-button">S'abonner</button>
+      `;
+
+
+
 
       /// FIN DU CODE
 
