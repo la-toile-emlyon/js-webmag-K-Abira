@@ -1,0 +1,98 @@
+{
+  "journal": {
+    "nomJournal": "Luxury Travel Trends",
+    "logo": "assets/images/logo.svg",
+    "phraseAccroche": "Explorez les nouvelles frontières du luxe, de la technologie et de la durabilité",
+    "texteAppelAction": "Inscrivez-vous à notre newsletter pour rester à la pointe des tendances",
+    "articlePrincipal": {
+      "titre": "Le voyage du futur : Les innovations qui transforment le tourisme haut de gamme",
+      "description": "Entre personnalisation digitale et durabilité, découvrez comment les acteurs du luxe réinventent l'expérience voyage.",
+      "date": "1er Décembre 2024",
+      "theme": "Innovations",
+      "image": "assets/images/image1.png"
+    },
+    "articles": [
+      {
+        "titre": "Hôtels écoresponsables : Les nouvelles adresses incontournables en 2024",
+        "date": "28 Novembre 2024",
+        "theme": "Durabilité",
+        "image": "assets/images/image2.png",
+        "popularite": 62
+      },
+      {
+        "titre": "Technologies immersives : Quand la réalité virtuelle prépare vos voyages de luxe",
+        "date": "20 Novembre 2024",
+        "theme": "Technologies",
+        "image": "assets/images/image3.jpg",
+        "popularite": 15
+      },
+      {
+        "titre": "Voyages sur-mesure : Les agences qui redéfinissent le luxe",
+        "date": "15 Novembre 2024",
+        "theme": "Tendances",
+        "image": "assets/images/image4.jpg",
+        "popularite": 97
+      },
+      {
+        "titre": "Croisières exclusives : Naviguer vers une expérience unique et durable",
+        "date": "10 Novembre 2024",
+        "theme": "Expériences",
+        "image": "assets/images/image2.png",
+        "popularite": 67
+      },
+      {
+        "titre": "Les destinations luxueuses les plus prisées pour 2025",
+        "date": "5 Novembre 2024",
+        "theme": "Destinations",
+        "image": "assets/images/image3.jpg",
+        "popularite": 30
+      }
+    ],
+    "themes": [
+      {
+        "nom": "Innovations",
+        "description": "Les technologies et idées révolutionnaires qui façonnent le tourisme de luxe."
+      },
+      {
+        "nom": "Durabilité",
+        "description": "Les bonnes pratiques et initiatives écoresponsables dans le secteur du luxe."
+      },
+      {
+        "nom": "Technologies",
+        "description": "L'intégration des outils digitaux pour enrichir l'expérience client."
+      },
+      {
+        "nom": "Tendances",
+        "description": "Les évolutions et attentes des voyageurs haut de gamme."
+      },
+      {
+        "nom": "Expériences",
+        "description": "Les voyages et services qui repoussent les limites du luxe."
+      },
+      {
+        "nom": "Destinations",
+        "description": "Les lieux qui incarnent le summum du raffinement et de l'exclusivité."
+      }
+    ],
+    "auteurs": [
+      {
+        "prenom": "Aurélie",
+        "typeExperience": "Consultante en tourisme de luxe",
+        "presentation": "Experte en stratégie et innovation, je conseille les marques sur la transformation de l'expérience client haut de gamme.",
+        "photo": "assets/images/image2.png"
+      },
+      {
+        "prenom": "Paul",
+        "typeExperience": "Journaliste voyages",
+        "presentation": "Avec une passion pour les voyages d'exception, je partage mes découvertes et analyse les tendances du luxe.",
+        "photo": "assets/images/image3.jpg"
+      },
+      {
+        "prenom": "Sophie",
+        "typeExperience": "Spécialiste en durabilité",
+        "presentation": "Je mets en lumière les initiatives qui allient luxe et respect de l'environnement.",
+        "photo": "assets/images/image4.jpg"
+      }
+    ]
+  }
+}
