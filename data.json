@@ -1,7 +1,7 @@
 {
   "journal": {
     "nomJournal": "Luxury Travel Trends",
-    "logo": "assets/images/logo.svg",
+    "logo": "assets/images/travel-logo.png",
     "phraseAccroche": "Explorez les nouvelles frontières du luxe, de la technologie et de la durabilité",
     "texteAppelAction": "Inscrivez-vous à notre newsletter pour rester à la pointe des tendances",
     "articlePrincipal": {
@@ -9,42 +9,42 @@
       "description": "Entre personnalisation digitale et durabilité, découvrez comment les acteurs du luxe réinventent l'expérience voyage.",
       "date": "1er Décembre 2024",
       "theme": "Innovations",
-      "image": "assets/images/image1.png"
+      "image": "assets/images/luxury.jpg"
     },
     "articles": [
       {
         "titre": "Hôtels écoresponsables : Les nouvelles adresses incontournables en 2024",
         "date": "28 Novembre 2024",
         "theme": "Durabilité",
-        "image": "assets/images/image2.png",
+        "image": "assets/images/hoteleco.jpg",
         "popularite": 62
       },
       {
         "titre": "Technologies immersives : Quand la réalité virtuelle prépare vos voyages de luxe",
         "date": "20 Novembre 2024",
         "theme": "Technologies",
-        "image": "assets/images/image3.jpg",
+        "image": "assets/images/virtuel.jpg",
         "popularite": 15
       },
       {
         "titre": "Voyages sur-mesure : Les agences qui redéfinissent le luxe",
         "date": "15 Novembre 2024",
         "theme": "Tendances",
-        "image": "assets/images/image4.jpg",
+        "image": "assets/images/voyages.jpg",
         "popularite": 97
       },
       {
         "titre": "Croisières exclusives : Naviguer vers une expérience unique et durable",
         "date": "10 Novembre 2024",
         "theme": "Expériences",
-        "image": "assets/images/image2.png",
+        "image": "assets/images/croisiere.jpg",
         "popularite": 67
       },
       {
         "titre": "Les destinations luxueuses les plus prisées pour 2025",
         "date": "5 Novembre 2024",
         "theme": "Destinations",
-        "image": "assets/images/image3.jpg",
+        "image": "assets/images/voyagederêve.jpg",
         "popularite": 30
       }
     ],
@@ -79,19 +79,19 @@
         "prenom": "Aurélie",
         "typeExperience": "Consultante en tourisme de luxe",
         "presentation": "Experte en stratégie et innovation, je conseille les marques sur la transformation de l'expérience client haut de gamme.",
-        "photo": "assets/images/image2.png"
+        "photo": "assets/images/aurelie.jpg"
       },
       {
         "prenom": "Paul",
         "typeExperience": "Journaliste voyages",
         "presentation": "Avec une passion pour les voyages d'exception, je partage mes découvertes et analyse les tendances du luxe.",
-        "photo": "assets/images/image3.jpg"
+        "photo": "assets/images/paul.jpg"
       },
       {
         "prenom": "Sophie",
         "typeExperience": "Spécialiste en durabilité",
         "presentation": "Je mets en lumière les initiatives qui allient luxe et respect de l'environnement.",
-        "photo": "assets/images/image4.jpg"
+        "photo": "assets/images/sophie.jpg"
       }
     ]
   }

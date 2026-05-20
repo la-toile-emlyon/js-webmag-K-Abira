@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Webmag</title>
    <link rel="stylesheet" href="style.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
+
 <body>
-   
+
    <!-- HEADER -->
    <header class="header">
       <div class="container">
+         <!-- <img src="" alt=""> -->
          <h1 id="nom-journal"></h1>
          <p id="phrase-accroche"></p>
       </div>
@@ -20,12 +24,11 @@
    <nav class="navbar">
       <div class="container">
          <div id="themes-nav" class="themes-nav">
-            <!-- <div class="nav-theme-btn">
-               <button>Tous</button> -->
-               <!-- <button class="navbar-button">Articles</button>
-               <button class="navbar-button">Thèmes</button>
-               <button class="navbar-button">Auteurs</button> -->
-            <!-- </div> -->
+            <!-- <button class="nav-theme-btn">Durabilité</button>
+            <button class="nav-theme-btn">Technologies</button>
+            <button class="nav-theme-btn">Tendances</button>
+            <button class="nav-theme-btn">Expériences</button>
+            <button class="nav-theme-btn">Destinations</button> -->
          </div>
       </div>
    </nav>
@@ -35,7 +38,6 @@
       <div class="container-full">
          <div id="article-principal">
             <!-- <img id="hero-image" src="" alt="">
-   
             <div class="hero-info">
                <button class="read-article-btn">Lire l'article</button>
                <h2 id="hero-titre"></h2>
@@ -68,10 +70,10 @@
       <div class="container">
          <h2 class="section-title">Nos Thèmes</h2>
          <div id="themes-list" class="themes-list">
-               <!-- <div class="theme-item">
-                  <h3>Titre</h3>
-                  <p>Description</p>
-               </div> -->
+            <!-- <div class="theme-item">
+               <h3>Titre</h3>
+               <p>Description</p>
+            </div> -->
          </div>
       </div>
    </section>
@@ -92,7 +94,7 @@
    <section class="cta-section">
       <div class="container">
          <div id="call-to-action">
-            <!-- <p>Rejoinez notre newsletter pour suivre vos idols préférés</p>
+            <!-- <p></p>
             <button class="cta-button">S'abonner</button> -->
          </div>
       </div>
@@ -105,6 +107,11 @@
       </div>
    </footer>
 
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+      AOS.init();
+   </script>
    <script src="script.js"></script>
 </body>
+
 </html>

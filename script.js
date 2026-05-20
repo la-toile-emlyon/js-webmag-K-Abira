@@ -12,6 +12,7 @@ function getData() {
 
 
       // TODO 1: REMPLIR LE HEADER
+
       let headerDiv = document.querySelector(".container");
       console.log(headerDiv);
 
@@ -26,18 +27,22 @@ function getData() {
 
       // TODO 2: REMPLIR LA NAVIGATION
 
-      let navDiv = document.querySelector(".navbar");
+      let navDiv = document.getElementById("themes-nav");
       console.log(navDiv);
 
-      let navButton1 = document.createElement("button");
-      
-      let navButton2 = document.createElement("button");
+      function creerNavBarButton(navbarButton) {
+        let navBar = data.journal.articles.theme;
 
-      let navButton3 = document.createElement("button");
+        let navBarButtons = `<button class="nav-theme-btn">${navbarButton.theme}</button>`;
 
-      let navButton4 = document.createElement("button");
+        navDiv.insertAdjacentHTML("beforeend", navBarButtons);
+      };
 
-      navDiv.insertAdjacentHTML("beforeend", navButton1);
+      navDiv.insertAdjacentHTML("beforeend", `<button class="nav-theme-btn">Tous</button>`);
+
+      data.journal.articles.forEach(navbarButton => {
+        creerNavBarButton(navbarButton);
+      });
 
 
       // TODO 3: REMPLIR L'ARTICLE PRINCIPAL
@@ -45,7 +50,7 @@ function getData() {
       let heroSection = document.querySelector(".hero");
       console.log(heroSection);
 
-      let articleContainer = document.getElementById("article-principal")
+      let articleContainer = document.getElementById("article-principal");
 
       let article = data.journal.articlePrincipal;
 
@@ -62,26 +67,27 @@ function getData() {
 
 
       // TODO 4: REMPLIR LA GRILLE D'ARTICLES
- 
+
       let containerArticles = document.querySelector("#articles-grid");
- 
+
       function creerCarte(article) {
         let articles = data.journal.articles[0];
-       
-        let card = `<div class="article-card">
+
+        let card = `<div class="article-card", data-aos="fade-up">
           <img src="${article.image}" alt="">
           <div class="article-content">
             <span class="theme-badge">${article.theme}</span>
             <h3>${article.titre}</h3>
             <p class="date">${article.date}</p>
-          </div> `;
+          </div> 
+        `;
 
         containerArticles.insertAdjacentHTML("beforeend", card);
       };
 
       data.journal.articles.forEach(article => {
-            creerCarte(article)
-        });
+        creerCarte(article);
+      });
 
 
       /// Pour une carte je peux créer plusieurs variables pour chaque object qui est dans le tableau "articles". Par exemple mettre "data.journal.articles", car les articles se trouvent dans l'objet "Journal" qui lui comporte d'autres objects.. Ensuite pour cibler 1 carte, j'utilise l'index ([0]) pour rechercher ma première carte en faisant "data.journal.articles[0]" et pour être plus précis je met un point et récupérer ce qui m'intéresse comme ici "let firstArticleTitle = data.journal.articles[0].titre;". Ça c'est la première technique ! 
@@ -95,88 +101,112 @@ function getData() {
       // let firstArticleImage = data.journal.articles[0].image;
 
       // let firstArticlePopularite = data.journal.articles[0].popularite;
-      
+
       // Je peux également faire plus simple en créant une variable générale et cibler. Comme "let articles = data.journal.articles[0];" et faire un console.log par la suite.
 
       // let articles = data.journal.articles[0];
       // console.log(articles);
-    
-    
+
+
       // TODO 5: REMPLIR LES THEMES
 
-        let containerThemes = document.getElementById("themes-list");
- 
-        function creerCarteTheme(theme) {
-          let themes = data.journal.themes[0];
-        
-          let cardThemes = `<div class="theme-item">
-            <h3>${theme.nom}</h3>
-            <p>${theme.description}</p>
-          </div> `;
-        
-          containerThemes.insertAdjacentHTML("beforeend", cardThemes);
-        };
+      let containerThemes = document.getElementById("themes-list");
 
-        data.journal.themes.forEach(theme => {
-            creerCarteTheme(theme)
-          });
+      function creerCarteTheme(theme) {
+        let themes = data.journal.themes[0];
+
+        let cardThemes = `
+          <div class="theme-item", data-aos="fade-up",          data-aos-anchor-placement="center-bottom"">
+          <h3>${theme.nom}</h3>
+          <p>${theme.description}</p>
+          </div> 
+        `;
+
+        containerThemes.insertAdjacentHTML("beforeend", cardThemes);
+      };
+
+      data.journal.themes.forEach(theme => {
+        creerCarteTheme(theme);
+      });
+
 
       // TODO 6: REMPLIR LES AUTEURS
 
-        // `<section class="authors-section">
-        //   <div class="container">
-        //     <h2 class="section-title">Nos Auteurs</h2>
-        //     <div id="authors-list" class="authors-list">
-        //     </div>
-        //   </div>
-        // </section>`
+      let containerAuteurs = document.getElementById("authors-list");
 
-         let containerAuteurs = document.getElementById("authors-list");
- 
-        function creerCarteAuteurs(auteur) {
-          let auteurs = data.journal.auteurs[0];
-        
-          let cardAuteurs = `<div class="author-card">
+      function creerCarteAuteurs(auteur) {
+        let auteurs = data.journal.auteurs[0];
+
+        let cardAuteurs = `<div class="author-card", data-aos="fade-up"
+     data-aos-duration="2000">
             <img class="author-image" src="${auteur.photo}" alt="">
             <h3 >${auteur.prenom}</h3>
             <p class="author-role">${auteur.typeExperience}</p>
             <p class="author-bio">${auteur.presentation}</p>
-          </div> `;
-        
-          containerAuteurs.insertAdjacentHTML("beforeend", cardAuteurs);
-        };
+            </div> 
+          `;
 
-        data.journal.auteurs.forEach(auteur => {
-            creerCarteAuteurs(auteur)
-          });
+        containerAuteurs.insertAdjacentHTML("beforeend", cardAuteurs);
+      };
+
+      data.journal.auteurs.forEach(auteur => {
+        creerCarteAuteurs(auteur);
+      });
 
 
       // TODO 7: REMPLIR LE CALL TO ACTION
 
-        let ctaDiv = document.getElementById("call-to-action");
-        console.log(ctaDiv);
+      let ctaDiv = document.getElementById("call-to-action");
+      console.log(ctaDiv);
 
-        ctaDiv.innerHTML = `
-        <p>${journal.texteAppelAction}</p>
+      ctaDiv.innerHTML = `<p>${journal.texteAppelAction}</p>
         <button class="cta-button">S'abonner</button>
       `;
 
 
-
-
       /// FIN DU CODE
-
-        // `<footer class="footer">
-        //   <div class="container">
-        //     <p>&copy; 2026 Webmag. Tous droits réservés.</p>
-        //   </div>
-        // </footer>`
 
       // BONUS 1 : Alert sur le bouton CTA
 
+      let ctaButton = document.querySelector(".cta-button");
+
+      ctaButton.addEventListener("click", function () {
+        alert("Merci pour votre intérêt !");
+      });
+
       // BONUS 2 : Filtrage par thème
 
+      let themeButtons = document.querySelectorAll(".nav-theme-btn");
+
+      themeButtons.forEach(buttons => {
+        buttons.addEventListener("click", () => {
+          let themeChoisi = buttons.textContent;
+          filtrerArticles(themeChoisi);
+        });
+      });
+
+      function filtrerArticles(themeButton) {
+        articles = data.journal.articles;
+
+        if (themeButton !== "Tous") {
+          articles = articles.filter(articleFilter => articleFilter.theme === themeButton);
+        };
+
+        afficherArticles(articles);
+      };
+
+      function afficherArticles(liste) {
+        containerArticles.innerHTML = "";
+
+        liste.forEach(article => {
+          creerCarte(article);
+        });
+      };
+
+
       // BONUS 3 : Tri par popularité
+
+
     })
     .catch((error) => console.error('Erreur lors de la lecture des données :', error));
 }

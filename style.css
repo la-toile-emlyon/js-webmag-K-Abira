@@ -68,7 +68,9 @@ p  { color: var(--text-muted); line-height: 1.7; }
 
 /* ── Header ── */
 .header {
-   background: var(--primary);
+   background: #257499;
+   background: linear-gradient(90deg, rgba(37, 116, 153, 1) 0%, rgba(102, 212, 227, 1) 50%, rgba(50, 168, 102, 1) 100%);
+   /* background: var(--primary); */
    color: var(--text-white);
    padding: 80px 0 72px;
    text-align: center;
@@ -246,7 +248,9 @@ p  { color: var(--text-muted); line-height: 1.7; }
 /* ── Themes section ── */
 .themes-section {
    padding: var(--space-lg) 0;
-   background: var(--primary);
+   background: #2786b3;
+   background: radial-gradient(circle, rgba(39, 134, 179, 1) 0%, rgba(41, 54, 89, 1) 50%, rgba(9, 46, 25, 1) 100%);
+   /* background: var(--primary); */
 }
 .themes-section .section-title { color: var(--text-white); }
 .themes-list {
@@ -320,7 +324,9 @@ p  { color: var(--text-muted); line-height: 1.7; }
 /* ── CTA section ── */
 .cta-section {
    padding: var(--space-lg) 0;
-   background: var(--primary);
+   background: #2786b3;
+   background: radial-gradient(circle, rgba(39, 134, 179, 1) 0%, rgba(41, 54, 89, 1) 50%, rgba(9, 46, 25, 1) 100%);
+   /* background: var(--primary); */
    text-align: center;
    position: relative;
    overflow: hidden;
