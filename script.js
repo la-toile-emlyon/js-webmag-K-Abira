@@ -19,7 +19,7 @@ function getData() {
       let journal = data.journal;
 
       headerDiv.innerHTML = `
-        <img src="${journal.logo}" alt="">
+        <img class="logoo" src="${journal.logo}" alt="">
         <h1>${journal.nomJournal}</h1>
         <p><b>${journal.phraseAccroche}</b></p>
       `;

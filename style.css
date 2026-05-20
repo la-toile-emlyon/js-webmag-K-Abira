@@ -375,3 +375,10 @@ p  { color: var(--text-muted); line-height: 1.7; }
    font-size: .85rem;
 }
 .footer p { color: rgba(255,255,255,.3); margin: 0; }
+
+
+/* ── CSS Abira ── */
+.logoo {
+
+   position: absolute;
+} 
