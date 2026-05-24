@@ -38,7 +38,7 @@ function getData() {
         navDiv.insertAdjacentHTML("beforeend", navBarButtons);
       };
 
-      navDiv.insertAdjacentHTML("beforeend", `<button class="nav-theme-btn">Tous</button>`);
+      navDiv.insertAdjacentHTML("beforeend", `<button class="nav-theme-btn active">Tous</button>`);
 
       data.journal.articles.forEach(navbarButton => {
         creerNavBarButton(navbarButton);
@@ -116,7 +116,7 @@ function getData() {
         let themes = data.journal.themes[0];
 
         let cardThemes = `
-          <div class="theme-item", data-aos="fade-up",          data-aos-anchor-placement="center-bottom"">
+          <div class="theme-item", data-aos="fade-up", data-aos-anchor-placement="center-bottom"">
           <h3>${theme.nom}</h3>
           <p>${theme.description}</p>
           </div> 
